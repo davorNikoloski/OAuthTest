@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Outdoor Odyssey</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-QyJrV7wRwBb+EJ7z/ZvZbYVp3hCf3lq3MQrvQuRSVo8yDws+nLHhMbbi5wwgG5nwt+5im5eTx/h5liL1Jf0iWQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Poppins&family=Source+Code+Pro:wght@300&family=Titillium+Web:wght@200&family=Varela+Round&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id" content="441739940837-fli3ejpskaifccrrjtr8jsc10ccm7rvm.apps.googleusercontent.com">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="{{url_for('static', filename='index.css')}}" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="bg-primary text-white text-center vid-banner">
+
+    <img class="vid" src="/static/media/bk.jpg" alt="">
+    <div class="video-overlay">
+        <h1>Take a journey {{user_info.name}} !</h1>
+    </div>
+</div>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark navigation">
+  <div class="container-fluid navigationbarCont">
+    <ul class="navbar-nav navigationbar">
+      <li class="nav-item">
+        <a target="_blank" class="nav-link active hm" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a target="_blank" class="nav-link sc" href="https://www.theguardian.com/travel/2018/mar/24/20-best-campsites-europe-camping-greece-france-spain">Destinations</a>
+      </li>
+      <li class="nav-item">
+        <a target="_blank" class="nav-link sc" href="https://www.campingworld.com/camping-2">Equipement</a>
+      </li>
+      <li class="nav-item gooogleAuth">
+        <a class="nav-link " href="{{url_for('login')}}" >Sign in</a>
+        <a class="nav-link " href="{{url_for('logout')}}">Sign out</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-sm-4">
+      <h2>About Us</h2>
+      <h5>Our Team:</h5>
+      <div class="profilePic"></div>
+      <p>At Outdoor Odyssey, we're passionate about camping and the great outdoors. Our mission is to inspire and empower people to get outside and experience the natural beauty of the world. Whether you're a seasoned pro or a first-time camper, we've got everything you need to plan your next adventure. Join us and discover the joy of camping!".</p>
+      <h3 class="mt-4">Our Favorites</h3>
+      <p>Check out some of our favorite camping locations.</p>
+      <ul class="nav nav-pills flex-column">
+        <li class="nav-item">
+          <a target="_blank" class="nav-link active" href="https://www.europeanbestdestinations.com/croatia-travel-guide/plitvice-lakes/">Plitvice Lakes National Park</a>
+        </li>
+        <li class="nav-item">
+          <a target="_blank" class="nav-link" href="https://wildtaiga.fi/en/">Wild Taiga</a>
+        </li>
+        <li class="nav-item">
+          <a target="_blank" class="nav-link" href="https://whc.unesco.org/en/list/100/">Durmitor</a>
+        </li>
+        <li class="nav-item">
+            <a target="_blank" class="nav-link" href="https://www.slovenia.info/en/stories/visit-triglav-national-park-with-respect">Triglav</a>
+        </li>
+        <li class="nav-item">
+            <a target="_blank" class="nav-link" href="https://npmavrovo.org.mk/en/">NP Mavrovo</a>
+        </li>
+    
+
+        </li>
+      </ul>
+      <hr class="d-sm-none">
+    </div>
+    <div class="col-sm-8">
+      <h2>Plitvice Lakes National Park, Croatia</h2>
+      <h5>A UNESCO World Heritage Site with crystal clear lakes and stunning waterfalls..</h5>
+      <div class="content-img1 content-img"></div>
+      <p>07 May, 2022</p>
+      <p>I arrived at Plitvice Lakes National Park and was immediately struck by the beauty of the lakes and waterfalls. I walked along the boardwalk, stopping often to take photos and marvel at the stunning scenery. The sound of rushing water was a constant companion, and I felt completely immersed in nature. It was a brief but unforgettable experience..</p>
+
+      <h2 class="mt-5">Tatra Mountains, Poland and Slovakia</h2>
+      <h5>A range of peaks with scenic hiking trails, caves, and beautiful mountain lakes.</h5>
+      <div class="content-img2 content-img"></div>
+      <p>16 April, 2023</p>
+      <p>As I hiked through the Tatra Mountains, I was surrounded by snow-capped peaks and stunning alpine scenery. The crisp mountain air filled my lungs, and the sun warmed my skin. I stopped to take in the view, and the silence was broken only by the sound of a distant waterfall. It was a breathtaking experience, and I felt completely at peace in the midst of nature.</p>
+    </div>
+  </div>
+</div>
+
+<footer class="bg-dark text-white py-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h5>Contact Us</h5>
+          <p>Email: <a href="mailto:OutdoorsO@gmail.com">OutdoorsO@gmail.com</a></p>
+          <p>Phone: +389 72 344 552</p>
+        </div>
+        <div class="col-md-6">
+          <h5>Follow Us</h5>
+          <ul class="list-inline">
+            <li class="list-inline-item"><a href="#"><i class="fab fa-facebook"></i></a></li>
+            <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+            <li class="list-inline-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <p>&copy; 2023 Example Company. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+<script>
+  function onSignIn(googleUser) {
+  var profile = googleUser.getBasicProfile();
+  console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+  console.log('Name: ' + profile.getName());
+  console.log('Image URL: ' + profile.getImageUrl());
+  console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+}
+
+function signOut() {
+    var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+      console.log('User signed out.');
+    });
+  }
+</script>
+
+</body>
+</html>
